@@ -33,7 +33,8 @@ let corsOptions = {
   optionsSuccessStatus: 200,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
-Cors usage
+
+//Cors usage
 app.use(cors(corsOptions));
 // app.use(cors());
 
