@@ -1,6 +1,6 @@
-require("dotenv").config();
-// Load config
-dotenv.config({ path: "./config/config.env" });
+// require("dotenv").config();
+// // Load config
+// dotenv.config({ path: "./config/config.env" });
 
 const express = require("express");
 const mongoose = require("mongoose");
