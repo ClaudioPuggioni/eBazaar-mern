@@ -17,8 +17,8 @@ let corsOptions = {
   origin: "https://fencebay.netlify.app",
   // origin: true,
   credentials: true,
-  optionsSuccessStatus: 200,
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  // optionsSuccessStatus: 200,
+  // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 
 //Cors usage
