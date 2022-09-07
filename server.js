@@ -11,19 +11,6 @@ const morgan = require("morgan");
 
 const DB_URI = "mongodb+srv://cau:KedQO7t5tUcmXgxJ@cluster0.5z2ih1z.mongodb.net/?retryWrites=true&w=majority";
 
-mongoose
-  .connect(DB_URI, {
-    useUnifiedTopology: true,
-    useNewURLParser: true,
-  })
-  .then(() => console.log("Connected to DB"))
-  .catch((err) => console.log(err));
-
-// All router imports
-const authRouter = require("./routes/auth");
-const catRouter = require("./routes/catRoute");
-const adRouter = require("./routes/adRoute");
-const { urlencoded } = require("express");
 const app = express();
 
 let corsOptions = {
@@ -37,6 +24,20 @@ let corsOptions = {
 //Cors usage
 app.use(cors(corsOptions));
 // app.use(cors());
+
+mongoose
+  .connect(DB_URI, {
+    useUnifiedTopology: true,
+    useNewURLParser: true,
+  })
+  .then(() => console.log("Connected to DB"))
+  .catch((err) => console.log(err));
+
+// All router imports
+const authRouter = require("./routes/auth");
+const catRouter = require("./routes/catRoute");
+const adRouter = require("./routes/adRoute");
+const { urlencoded } = require("express");
 
 // Middleware usage
 app.use(express.static("public"));
