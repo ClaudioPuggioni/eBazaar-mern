@@ -26,15 +26,16 @@ const adRouter = require("./routes/adRoute");
 const { urlencoded } = require("express");
 const app = express();
 
-// let corsOptions = {
-//   origin: "https://fencebay.netlify.app",
-//   // origin: true,
-//   optionsSuccessStatus: 200,
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-// };
-// Cors usage
-// app.use(cors(corsOptions));
-app.use(cors());
+let corsOptions = {
+  origin: "https://fencebay.netlify.app",
+  // origin: true,
+  credentials: true,
+  optionsSuccessStatus: 200,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};
+Cors usage
+app.use(cors(corsOptions));
+// app.use(cors());
 
 // Middleware usage
 app.use(express.static("public"));
