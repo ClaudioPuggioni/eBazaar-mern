@@ -27,7 +27,7 @@ const { urlencoded } = require("express");
 const app = express();
 
 let corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://fencebay.netlify.app",
   // origin: true,
   optionsSuccessStatus: 200,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -64,7 +64,7 @@ app.use("/auth", authRouter);
 app.use("/category", authenticateRequest, catRouter);
 app.use("/ads", authenticateRequest, adRouter);
 
-app.listen(8000);
+app.listen(process.env.PORT);
 
 function authenticateRequest(req, res, next) {
   const authHeaderInfo = req.headers["authorization"];
