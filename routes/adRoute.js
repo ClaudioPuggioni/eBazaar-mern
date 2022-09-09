@@ -64,6 +64,7 @@ router.post("/", upload.single("image"), async (req, res) => {
     closed_at,
     imageUrl: imageUrl,
   });
+
   try {
     const savedAd = await newAd.save();
     await UserModel.findOneAndUpdate({ _id: seller }, { $addToSet: { ads: savedAd._id } }, { returnDocument: "after" });
