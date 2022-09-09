@@ -11,7 +11,7 @@ const adSchema = new mongoose.Schema({
   buyer: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   created_at: { type: Date, default: Date.now },
   closed_at: { type: Date },
-  imageUrl: { type: String },
+  imageUrl: { type: String, default: false },
 });
 
 const AdModel = new mongoose.model("Ad", adSchema);
