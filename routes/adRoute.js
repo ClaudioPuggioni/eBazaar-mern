@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 const AdModel = require("../models/ad-model");
 const UserModel = require("../models/user");
-const jwt = require("jsonwebtoken");
 const multer = require("multer");
-const bcrypt = require("@types/bcryptjs");
+const bcrypt = require("bcryptjs");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
