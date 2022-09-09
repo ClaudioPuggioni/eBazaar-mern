@@ -14,6 +14,8 @@ const storage = multer.diskStorage({
   },
 });
 
+//https://ebazaar-back.herokuapp.com/
+
 const upload = multer({ storage: storage });
 
 // list all ads
@@ -47,7 +49,7 @@ router.post("/", upload.single("image"), async (req, res) => {
   }
   let imageUrl = false;
   if (req.file) {
-    imageUrl = process.env.PORT + "uploads/" + req.file.filename;
+    imageUrl = process.env.PORT + "/uploads/" + req.file.filename;
   }
 
   const newAd = new AdModel({
