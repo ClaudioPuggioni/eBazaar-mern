@@ -16,9 +16,9 @@ const DB_URI = "mongodb+srv://cau:KedQO7t5tUcmXgxJ@cluster0.5z2ih1z.mongodb.net/
 const app = express();
 
 let corsOptions = {
-  origin: "https://fencebay.netlify.app",
+  origin: "*",
   // origin: true,
-  credentials: true,
+  // credentials: true,
   // optionsSuccessStatus: 200,
   // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
