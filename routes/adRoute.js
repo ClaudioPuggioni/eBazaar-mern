@@ -49,7 +49,7 @@ router.post("/", upload.single("image"), async (req, res) => {
   }
   let imageUrl = false;
   if (req.file) {
-    imageUrl = process.env.PORT + "/uploads/" + req.file.filename;
+    imageUrl = "/uploads/" + req.file.filename;
   }
 
   const newAd = new AdModel({
