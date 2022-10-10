@@ -11,7 +11,7 @@ const morgan = require("morgan");
 
 // mongoose express bcryptjs nodemon (--save-dev)
 
-const DB_URI = "mongodb+srv://caunocau:M1ovt2HHnnRJFatK@cluster0.ddq401z.mongodb.net/?retryWrites=true&w=majority";
+const DB_URI = "mongodb+srv://caunocau:M1ovt2HHnnRJFatK@cluster0.ddq401z.mongodb.net/fencebay?retryWrites=true&w=majority";
 
 const app = express();
 
